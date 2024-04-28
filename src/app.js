@@ -4,6 +4,7 @@ const helmet = require("helmet");
 
 const app = express();
 const placeholderRoute = require("./routes/placeholder.route");
+const imageProcessRoute = require("./routes/imageProcess.route");
 
 app.use(cors());
 app.use(helmet());
@@ -15,6 +16,7 @@ app.use(
 
 // Routes
 app.use("/placeholder", placeholderRoute);
+app.use("/edit", imageProcessRoute);
 
 // handle 404 routes
 app.use("*", (req, res, next) => {
