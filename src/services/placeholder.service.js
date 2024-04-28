@@ -1,7 +1,7 @@
 const Jimp = require("jimp");
 
 exports.generateImage = (props) => {
-	let { bg, size, filetype = "png" } = props;
+	let { bg, size } = props;
 	const { height, width } = parseResolution(size);
 	const jim = new Jimp(height, width, bg);
 	return jim.getBufferAsync(Jimp.AUTO);
