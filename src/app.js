@@ -3,6 +3,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 
 const app = express();
+const placeholderRoute = require("./routes/placeholder.route");
 
 app.use(cors());
 app.use(helmet());
@@ -13,6 +14,7 @@ app.use(
 );
 
 // Routes
+app.use("/placeholder", placeholderRoute);
 
 // handle 404 routes
 app.use("*", (req, res, next) => {
