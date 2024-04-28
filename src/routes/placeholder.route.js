@@ -6,8 +6,8 @@ route.get("/:size.:filetype", generatePlaceholder);
 
 route.get("/:size", generatePlaceholder);
 
-route.get("/:width/:height", generatePlaceholder);
+// route.get("/:width/:height", generatePlaceholder);
 
-route.get("/:width/:height.:filetype", generatePlaceholder);
+// route.get("/:width/:height.:filetype", generatePlaceholder);
 
 module.exports = route;
